@@ -28,8 +28,14 @@ android {
     namespace = "de.kevlatus.flutter_broadcasts"
     compileSdkVersion 31
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+        coreLibraryDesugaringEnabled true // Enable desugaring
+    }
+
     kotlinOptions {
-        jvmTarget = "17" // or "11"
+        jvmTarget = JavaVersion.VERSION_1_8
     }
     
     sourceSets {
